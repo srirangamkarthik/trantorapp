@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @login_form.game %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @login_form.score %>
+</p>
+
+<%= link_to 'Edit', edit_login_form_path(@login_form) %> |
+<%= link_to 'Back', login_forms_path %>

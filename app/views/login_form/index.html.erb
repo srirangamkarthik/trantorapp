@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Login form</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Game</th>
+      <th>Score</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @login_forms.each do |login_form| %>
+      <tr>
+        <td><%= login_form.game %></td>
+        <td><%= login_form.score %></td>
+        <td><%= link_to 'Show', login_form %></td>
+        <td><%= link_to 'Edit', edit_login_form_path(login_form) %></td>
+        <td><%= link_to 'Destroy', login_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New High score', new_login_form_path %>
